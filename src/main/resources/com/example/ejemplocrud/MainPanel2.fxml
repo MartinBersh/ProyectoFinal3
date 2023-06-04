@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejemplocrud.ControladorHorarios">
+    <VBox layoutX="14.0" layoutY="111.0" prefHeight="130.0" prefWidth="52.0" spacing="15.0">
+        <Label text="ID">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="Profesor">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="Aula">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="Horario">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </VBox>
+
+    <VBox layoutX="75.0" layoutY="112.0" prefHeight="144.0" prefWidth="129.0" spacing="10.0">
+        <TextField fx:id="tID" />
+        <TextField fx:id="tNombreProfesor" />
+        <TextField fx:id="tAula" />
+        <TextField fx:id="tHorario" />
+
+    </VBox>
+    <HBox layoutX="215.0" layoutY="292.0" prefHeight="35.0" prefWidth="242.0" spacing="10.0">
+        <Button fx:id="insertButton" mnemonicParsing="false" onAction="#createHorarios" prefHeight="30.0" prefWidth="68.0" text="Guardar" />
+        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateHorarios" prefHeight="30.0" prefWidth="84.0" text="Actualizar" />
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteHorarios" prefHeight="30.0" prefWidth="60.0" text="Borrar" />
+    </HBox>
+    <TableView fx:id="table" layoutX="237.0" layoutY="64.0" prefHeight="210.0" prefWidth="400.0">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="35.0" text="ID" />
+            <TableColumn fx:id="colNprofesor" prefWidth="120.0" text="Profesor" />
+            <TableColumn fx:id="colaula" prefWidth="120.0" text="Aula" />
+            <TableColumn fx:id="colHorario" prefWidth="124.0" text="Horario" />
+        </columns>
+    </TableView>
+   <Label layoutX="234.0" layoutY="24.0" text="ASIGNADOR HORARIOS PROFESORES" />
+</AnchorPane>
